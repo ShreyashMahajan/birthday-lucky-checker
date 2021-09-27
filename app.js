@@ -5,11 +5,11 @@ var displayMessage = document.querySelector("#display-msg");
 btnCheck.addEventListener("click",isBirthdateLucky);
 
 function isBirthdateLucky(){ 
-    if ( birthDate.value >0 && luckyNumber.value > 0) {
+    if (  luckyNumber.value > 0) {
      if(birthDate.value && luckyNumber.value){
              var dateTotal = calculateDateSum();
-             var nuberLucky = luckyNumber.value;
-             if( dateTotal%nuberLucky ===0){
+             var numberLucky = luckyNumber.value;
+             if( dateTotal%numberLucky ===0){
                  showMessage("Your Birthday Is Lucky");
              }else {
                  showMessage("Your Birthday Is Not Lucky but your Hardwork can bring so many lucky days than your birthday")
