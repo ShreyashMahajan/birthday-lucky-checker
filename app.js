@@ -4,7 +4,8 @@ const btnCheck = document.querySelector("#btn-check");
 var displayMessage = document.querySelector("#display-msg");
 btnCheck.addEventListener("click",isBirthdateLucky);
 
-function isBirthdateLucky(){
+function isBirthdateLucky(){ 
+    if ( birthDate.value >0 && luckyNumber.value > 0) {
      if(birthDate.value && luckyNumber.value){
              var dateTotal = calculateDateSum();
              var nuberLucky = luckyNumber.value;
@@ -15,7 +16,9 @@ function isBirthdateLucky(){
              }
      }else {
             showMessage("Please Input Fields");
-     }
+     } } else {
+         showMessage("Please put Positive number");
+     } 
 }
 function calculateDateSum(){
     var dateOfBirth = birthDate.value;
